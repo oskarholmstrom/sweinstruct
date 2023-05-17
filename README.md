@@ -1,6 +1,6 @@
 # Making Instruction Finetuning Accessible to Non-English Languages: A Case Study on Swedish
 
-This repository contains the code, datasets, and model checkpoints for the paper "Making Instruction Finetuning Accessible to Non-English Languages: A Case Study on Swedish".
+This repository contains the code, datasets, and model checkpoints for the paper [Making Instruction Finetuning Accessible to Non-English Languages: A Case Study on Swedish](https://openreview.net/pdf?id=p-7kiQkoQ-I).
 
 
 ## Citation

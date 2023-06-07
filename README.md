@@ -18,6 +18,9 @@ To install all necessary packages, run the `setup.sh` script.
 
 Models can be downloaded from a Google Drive folder using the `download_models.py` script. You can specify which model you want to download directly in the script.
 
+```bash
+pip install gdown
+```
 ```python
 python download_models.py
 ```

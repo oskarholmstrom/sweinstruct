@@ -2,6 +2,8 @@ from collections import defaultdict
 from functools import partial
 
 import torch
+from torch.nn.utils.rnn import pad_sequence
+from transformers import TrainingArguments, Trainer
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import numpy as np
 from utils.read_data import UIDataset
@@ -57,6 +59,7 @@ def run(args):
     temp = 0.75
     beams = 4
     do_sample = False
+    length_penalty = -1.0
     max_new_tokens = 512
 
     if args.model_name.lower() == 'gpt2':
@@ -65,6 +68,7 @@ def run(args):
     elif args.model_name.lower() == 'gpt-sw3' or args.model_name.lower() =='opt':
         model = AutoModelForCausalLM.from_pretrained(args.model_path, 
                                                         device_map="auto",
+                                                        #use_cache=False,
                                                         load_in_8bit=True,
                                                         max_memory=MAX_MEMORY
                                                         )
@@ -83,6 +87,7 @@ def run(args):
                                        max_new_tokens=max_new_tokens,
                                        num_beams=beams,
                                        do_sample=do_sample,
+                                       #length_penalty=length_penalty,
                                        ) 
         
         preds.append(generated_ids[0][input_ids.shape[1]:])

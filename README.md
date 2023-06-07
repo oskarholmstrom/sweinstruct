@@ -27,13 +27,13 @@ python download_models.py
 
 Here's an example of how to run an evaluation:
 
-```python
+```bash
 python run_rouge_gen.py --model_name gpt-sw3 --model_path ./models/SW3-INSTRUCT/1.3b/checkpoint-6000/ --tokenizer_path AI-Sweden-Models/gpt-sw3-1.3b --test_dataset ./data/unnatural_instructions_swe/test.jsonl --max_len 2048
 ```
 
 Here's an example of how to run training:
 
-```python
+```bash
 python train.py --model_name gpt-sw3 --model_version 1.3b --model_path AI-Sweden-Models/gpt-sw3-1.3b --train_dataset ./data/unnatural_instructions_swe/train.jsonl --test_dataset ./data/unnatural_instructions_swe/test.jsonl --out_dir ./models/SW3-INSTRUCT/test/ --max_len 2048
 ```
 

@@ -4,7 +4,7 @@ pip install --quiet torch==1.12.1 torchvision torchaudio
 
 pip install --quiet git+https://github.com/huggingface/transformers.git
 
-pip install —quiet nltk
+pip install —-quiet nltk
 
 git clone https://github.com/huggingface/evaluate
 cd evaluate

@@ -14,6 +14,8 @@ To install all necessary packages, run the `setup.sh` script.
 ./setup.sh
 ```
 
+**Note:** We use Python 3.8 in this project, which is compatible with torch==1.12.1. If using other python version then you may have to change to a compatabile torch version in the setup.sh script.
+
 ### Download Models
 
 Models can be downloaded from a Google Drive folder using the `download_models.py` script. You can specify which model you want to download directly in the script.

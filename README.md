@@ -20,8 +20,6 @@ Models can be downloaded from a Google Drive folder using the `download_models.p
 
 ```bash
 pip install gdown
-```
-```python
 python download_models.py
 ```
 

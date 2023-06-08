@@ -18,19 +18,18 @@ To install all necessary packages, run the `setup.sh` script.
 
 ### Download Models
 
-Models can be downloaded from a Google Drive folder using the `download_models.py` script. You can specify which model you want to download directly in the script.
+The models are accessible through the huggingface model hub:
 
-```bash
-pip install gdown
-python download_models.py
-```
+[oskarhol/gpt-sw3-instruct-1.3b](https://huggingface.co/oskarhol/gpt-sw3-instruct-1.3b)
+[oskarhol/opt-instruct-swe-1.3b](https://huggingface.co/oskarhol/opt-instruct-swe-1.3b)
+
 
 ### Running Evaluation and Training
 
 Here's an example of how to run an evaluation:
 
 ```bash
-python run_rouge_gen.py --model_name gpt-sw3 --model_path gpt-sw3-checkpoint-6000 --tokenizer_path AI-Sweden-Models/gpt-sw3-1.3b --test_dataset ./data/unnatural_instructions_swe/test.jsonl --max_len 2048
+python run_rouge_gen.py --model_name gpt-sw3 --model_path oskarhol/gpt-sw3-instruct-1.3b --tokenizer_path AI-Sweden-Models/gpt-sw3-1.3b --test_dataset ./data/unnatural_instructions_swe/test.jsonl --max_len 2048
 ```
 
 Here's an example of how to run training:
